@@ -16,7 +16,7 @@
             <div class="instructions">
                 <h2>Elige la caja que representa este color:</h2>
                 <!-- Color que se debe seleccionar -->
-                <p class="color-rgb">RGB<span id="winner-color">(255, 57, 80)</span></p>
+                <p class="color-rgb"><span id="winner-color"></span></p>
             </div>
             <div class="buttoms-choosecolor">
                 <!-- Marcadores -->
@@ -25,23 +25,23 @@
                         Aciertos: <span id="winner-score">0</span>
                     </div>
                     <div class="looser-score">
-                        Fallos: <span id="looser-score">0</span>   
+                        Fallos: <span id="looser-score" value="0">0</span>   
                     </div>
                 </div>
 
                 <!-- Aviso de acierto o fallo -->
                 <div class="right-wrong">
-                    <div id="correct">
+                    <div id="correct" class="hidden">
                         ¡Acierto!
                     </div>
-                    <div id="wrong">
+                    <div id="wrong" class="hidden">
                         ¡Error!
                     </div>
                 </div>
             </div>
 
 
-            <button id="play-again">Jugar de nuevo</button>
+            <button type="submit" id="play-again">Jugar de nuevo</button>
         </section>
 
         <section class="colors-options">

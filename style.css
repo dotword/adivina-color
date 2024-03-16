@@ -70,13 +70,15 @@ section.right-color {
 .right-wrong {
     display: flex;
 }
+.hidden {
+    display: none;
+}
 #correct, #wrong{
     width: 100%;
     background: #4CAF50;
     font-size: 2rem;
     padding: 5px;
     color: var(--background-color);
-    display: none;
 }
 #wrong {
     background-color: #f44336;
