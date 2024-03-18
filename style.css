@@ -1,0 +1,43 @@
+body {
+    background-color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 70px;
+    margin: 0;
+}
+
+h1 {
+    color: firebrick;
+    text-align: center;
+}
+
+#botones {
+    
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.codigo-color {
+    max-width: 600px;
+    background-color: yellow;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+
+
+.cuadrado {
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 30%;
+    background-color: blue;
+    padding-bottom: 30%;
+    float: right;
+    margin: 1.66%;
+}
+
+#contendor {
+    display: flex;
+    flex-direction: row;
+}
