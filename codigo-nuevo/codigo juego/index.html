@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Juego RGB</title>
+</head>
+<body>
+    <header>
+        <h1>Adivina el color</h1>
+    </header>
+    <nav class="alerta">
+        <div id="acierto" class="hidden">
+            ¡Acierto!
+        </div>
+        <div id="fallo" class="hidden">
+            ¡Fallo!
+        </div>
+    </nav>
+    <main class="contenedor">
+        <aside class="rgb">
+            <h3>¿Qué color es?</h3>
+            <h2 class="codigo-color"><span id="codigo-ganador">RGB (255, 0, 0)</span></h2>
+            <a href="/pantalla incio/inicio.html">
+                <button class="reinicio">Reiniciar juego</button>
+            </a>
+        </aside>
+        <section class="burbujas-color">
+            <button class="color"></button>
+            <button class="color"></button>
+            <button class="color"></button>
+            <button class="color"></button>
+            <button class="color"></button>
+            <button class="color"></button>
+        </section>
+    </main>
+    <footer class="recuento">
+        <div class="recuento-aciertos">
+            Aciertos: <span id="recuento-aciertos">0</span>
+        </div>
+        <div class="recuento-fallos">
+            Fallos:<span id="recuento-fallos">0</span>
+        </div>
+    </footer>
+    
+</body>
+</html>
