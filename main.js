@@ -1,20 +1,20 @@
 "use strict";
 
-let winnerColor = document.getElementById("winner-color");
-let winnerScore = document.getElementById("winner-score");
-let looserScore = document.getElementById("looser-score");
-let wrong = document.getElementById("wrong");
-let right = document.getElementById("correct");
-let squares = document.querySelectorAll(".square");
+const winnerColor = document.getElementById("winner-color");
+const winnerScore = document.getElementById("winner-score");
+const looserScore = document.getElementById("looser-score");
+const wrong = document.getElementById("wrong");
+const right = document.getElementById("correct");
+const squares = document.querySelectorAll(".square");
 
-let numberSquares = 3;
+let numberSquares = 6;
 let colorVar = storeColors();
 let pickedColor = pickAColor();
 
 /// Crear las variables de los marcadores
 let scoreRight = 0;
 let scoreWrong = 0;
-const customModelMain = document.querySelector(".custom-model-main");
+const customModelMain = document.querySelector(".popup-main");
 const playAgain = document.getElementById("play-again");
 const youWin = document.getElementById("you-win");
 const youLoose = document.getElementById("you-loose");
@@ -62,10 +62,6 @@ function setUpGame() {
         winnerScore.textContent = scoreRight;
         //Mostrar el mensaje de acierto
         right.classList.remove("hidden");
-        //Timeout para resetear los colores
-        setTimeout(() => {
-          // resetColors();
-        }, 1000);
       } else {
         // Increntar en 1 el marcador de fallos
         scoreWrong++;
