@@ -134,3 +134,4 @@ function resetGame() {
 
 // Empezar el juego
 setUpGame();
+
