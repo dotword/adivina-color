@@ -1,3 +1,4 @@
+
 "use strict";
 
 let winnerColor = document.getElementById("winner-color");
@@ -132,4 +133,7 @@ function resetGame() {
 
 
 // Empezar el juego
+
 setUpGame();
+
+
