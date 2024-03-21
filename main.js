@@ -126,4 +126,7 @@ function resetGame() {
   wrong.classList.add("hidden");
 }
 // Empezar el juego
+
 setUpGame();
+
+
