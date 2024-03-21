@@ -1,8 +1,5 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
-
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 :root {
   --main-color: #222831;
@@ -55,12 +52,9 @@ section.right-color {
 .color-rgb {
   font-weight: 900;
   font-size: 2.5rem;
-  margin: 3rem auto;
-
   margin: 2rem auto;
   border: 2px solid var(--main-color);
   padding: 1rem 0;
-
 }
 .scores {
   display: flex;
@@ -77,19 +71,6 @@ section.right-color {
 }
 .right-wrong {
   display: flex;
-
-}
-.hidden {
-  display: none;
-}
-#correct,
-#wrong {
-  width: 100%;
-  background: #4caf50;
-  font-size: 2rem;
-  padding: 5px;
-  color: var(--background-color);
-
   position: relative;
 }
 .right-wrong > div {
@@ -97,49 +78,9 @@ section.right-color {
 }
 .hidden {
   display: none;
-
 }
 #correct,
 #wrong {
-
-  background-color: #f44336;
-}
-
-section.colors-options {
-  width: 90%;
-  align-self: center;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  max-width: 80rem;
-  margin: 2rem auto;
-}
-.square {
-  background: chocolate;
-  width: 30%;
-  padding-top: 30%;
-  cursor: pointer;
-}
-
-#play-again {
-  border: 2px solid var(--dark-grey);
-  font-weight: 900;
-  padding: 1rem;
-  font-size: 1.6rem;
-  font-family: "Lato", sans-serif;
-  color: var(--dark-grey);
-  background-color: var(--background-color);
-  cursor: pointer;
-  max-width: 25rem;
-  margin: 2rem auto;
-  transition: background-color 0.3s ease-in-out;
-}
-#play-again:hover {
-  background-color: var(--light-green);
-}
-
-.custom-model-main {
-
   width: 100%;
   background: #4caf50;
   font-size: 2rem;
@@ -176,7 +117,7 @@ section.colors-options {
 }
 .square:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  transform: scale(1.10);
+  transform: scale(1.1);
 }
 #play-again {
   border: 2px solid var(--dark-grey);
@@ -196,7 +137,6 @@ section.colors-options {
 }
 
 .popup-main {
-
   text-align: center;
   position: fixed;
   top: 0;
@@ -208,45 +148,7 @@ section.colors-options {
   transition: opacity 0.15s linear;
   z-index: -1;
   display: flex;
-    align-items: center;
-
-}
-
-.model-open {
-  z-index: 99999;
-  opacity: 1;
-  overflow: hidden;
-}
-.custom-model-inner {
-  transform: translate(0, -25%);
-  transition: transform 0.3s ease-out;
-  width: 60rem;
-  margin: 3rem auto;
-  max-width: 90%;
-}
-.custom-model-wrap {
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  max-height: calc(100vh - 70px);
-}
-.model-open .custom-model-inner {
-  transform: translate(0, 0);
-  position: relative;
-  z-index: 999;
-}
-.notice-popup {
-    font-size: 3rem;
-    font-weight: 900;
-    margin: 2rem auto;
-    color: var(--dark-grey);
-}
-.model-open .bg-overlay {
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 99;
-}
+  align-items: center;
 }
 
 .model-open {
@@ -275,21 +177,20 @@ section.colors-options {
   z-index: 999;
 }
 .notice-popup {
-    font-family: "VT323";
-    font-size: 6em;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 2rem auto;
-    color: var(--dark-grey);
-    animation-name: example;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+  font-family: "VT323";
+  font-size: 6em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 2rem auto;
+  color: var(--dark-grey);
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 .model-open .bg-overlay {
   background: rgba(0, 0, 0, 0.6);
   z-index: 99;
 }
-
 .bg-overlay {
   background: rgba(0, 0, 0, 0);
   height: 100vh;
@@ -339,24 +240,20 @@ section.colors-options {
 }
 /* Media query */
 @media (min-width: 768px) {
-    .main-container {
-      flex-direction: row;
-      height: calc(100vh - 88px);
-    }
-    section.right-color {
-      width: 30%;
-
-      max-width: 40rem;
-
-      margin-bottom: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-    }
-
+  .main-container {
+    flex-direction: row;
+    height: calc(100vh - 88px);
   }
-    .square {
-      width: 30%;
-      padding-top: 30%;
+  section.right-color {
+    width: 30%;
+    max-width: 40rem;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .square {
+    width: 30%;
+    padding-top: 30%;
   }
 }
