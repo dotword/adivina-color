@@ -1,4 +1,3 @@
-
 "use strict";
 
 const winnerColor = document.getElementById("winner-color");
@@ -126,7 +125,5 @@ function resetGame() {
   right.classList.add("hidden");
   wrong.classList.add("hidden");
 }
-
-
 // Empezar el juego
 setUpGame();
