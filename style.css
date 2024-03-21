@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
 
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
@@ -138,7 +139,7 @@ section.colors-options {
 }
 
 .custom-model-main {
-=======
+
   width: 100%;
   background: #4caf50;
   font-size: 2rem;
@@ -359,4 +360,3 @@ section.colors-options {
       padding-top: 30%;
   }
 }
-
