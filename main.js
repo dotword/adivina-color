@@ -7,13 +7,14 @@ const wrong = document.getElementById("wrong");
 const right = document.getElementById("correct");
 const squares = document.querySelectorAll(".square");
 
-let numberSquares = 6;
+let numberSquares = 3;
 let colorVar = storeColors();
 let pickedColor = pickAColor();
 
 /// Crear las variables de los marcadores
 let scoreRight = 0;
 let scoreWrong = 0;
+const numRightOrWrong = 3;
 const customModelMain = document.querySelector(".popup-main");
 const playAgain = document.getElementById("play-again");
 const youWin = document.getElementById("you-win");
@@ -46,14 +47,17 @@ function pickAColor() {
   return colorVar[randomIndex];
 }
 
+// Añade colores a las squares
+function setUpColors() {
+  squares.forEach(
+    (currVal, ind) => (squares[ind].style.background = colorVar[ind])
+  );
+}
+
 // Función del juego
 function setUpGame() {
-  for (let i = 0; i < squares.length; i++) {
-    //Añadir los colores a las cuadros
-    squares[i].style.background = colorVar[i];
-
-    // Al hacer click en un cuadrado tomar el color
-    squares[i].addEventListener("click", function () {
+  squares.forEach((currVal, ind) => {
+    squares[ind].addEventListener("click", function () {
       let clickedSquare = this.style.background;
 
       if (clickedSquare === pickedColor) {
@@ -71,20 +75,17 @@ function setUpGame() {
       }
       scoreSetUp();
     });
-  }
+  });
 }
 
 // Función del marcador
 function scoreSetUp() {
-  // Al llegar a 3 acierto o fallos termina la partida
-  if (scoreRight === 3 || scoreWrong === 3) {
+  // Al llegar a Número máximo de aciertos o fallos termina la partida
+  if (scoreRight === numRightOrWrong || scoreWrong === numRightOrWrong) {
     customModelMain.classList.add("model-open");
-
-    if (scoreRight === 3) {
-      youWin.classList.remove("hidden");
-    } else {
-      youLoose.classList.remove("hidden");
-    }
+    scoreRight === numRightOrWrong
+      ? youWin.classList.remove("hidden")
+      : youLoose.classList.remove("hidden");
 
     playAgain.addEventListener("click", function () {
       customModelMain.classList.remove("model-open");
@@ -105,9 +106,7 @@ function resetColors() {
   colorVar = storeColors();
   pickedColor = pickAColor();
   winnerColor.textContent = pickedColor.toUpperCase();
-  for (let i = 0; i < squares.length; i++) {
-    squares[i].style.background = colorVar[i];
-  }
+  setUpColors();
   setTimeout(() => {
     right.classList.add("hidden");
     wrong.classList.add("hidden");
@@ -125,8 +124,12 @@ function resetGame() {
   right.classList.add("hidden");
   wrong.classList.add("hidden");
 }
+
 // Empezar el juego
+function init() {
+  setUpColors();
+  setUpGame();
+}
 
-setUpGame();
-
-
+// Añadir listener al evento de carga de la ventana para iniciar la app
+window.addEventListener("load", init);
